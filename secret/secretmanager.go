@@ -1,6 +1,7 @@
 package secret
 
 import (
+	"encoding/json"
 	"fmt"
 	user "lambdaUser/aws"
 	"lambdaUser/models"
@@ -18,6 +19,11 @@ func GetSecret(secretName string) (models.SecretRDSJson, error) {
 	})
 	if err != nil {
 		fmt.Println(err.Error())
+		return dataSecret, err
 	}
-	return dataSecret, err
+
+	json.Unmarshal([]byte(*clave.SecretString), &dataSecret)
+
+	fmt.Println(">Lectura secretOK!")
+	return dataSecret, nil
 }
