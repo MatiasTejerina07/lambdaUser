@@ -4,7 +4,6 @@ import (
 	"context"
 	"lambdaUser/aws"
 
-	"github.com/MatiasTejerina07/lambdaUser/aws"
 	event "github.com/aws/aws-lambda-go/events"
 	lambda "github.com/aws/aws-lambda-go/lambda"
 )
