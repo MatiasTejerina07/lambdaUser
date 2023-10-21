@@ -6,6 +6,8 @@ import (
 	"lambdaUser/models"
 	"lambdaUser/secret"
 	"os"
+
+	_ "github.com/go-sql-driver/mysql"
 )
 
 var SecretModel models.SecretRDSJson
