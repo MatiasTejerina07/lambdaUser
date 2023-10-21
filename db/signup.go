@@ -26,5 +26,6 @@ func SignUp(sig models.SignUp) error {
 		fmt.Println(err.Error())
 		return err
 	}
+	fmt.Println("Registro exitoso")
 	return nil
 }
