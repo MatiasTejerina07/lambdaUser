@@ -23,7 +23,7 @@ func SignUp(sig models.SignUp) error {
 
 	_, err = Db.Exec(sentencia)
 	if err != nil {
-		fmt.Println(err.Error())
+		fmt.Println("Hay error en la sentencia:" + err.Error())
 		return err
 	}
 	fmt.Println(">Registro exitoso")
